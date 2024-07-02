@@ -1,0 +1,203 @@
+@import "./resources/css/bootstrap.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+
+title {
+    display: inline-block;
+    margin-bottom: 23px;
+}
+body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    
+    background: linear-gradient(#7CB9E8, #A3D4FA);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+    color: #fff;
+}
+
+.prototype {
+    display: none;
+}
+
+.container {
+    max-width: 860px;
+    padding: 0px 38px;
+}
+
+.actual-weather {
+    max-width: 431px;
+
+    .city {
+        font-size: 12px;
+        line-height: 14.5px;
+        padding: 0;
+        margin: 0;
+        background: none;
+        color: #fff;
+        border: none;        
+    }
+    .degrees {
+        display: block;
+        font-size: 48px;
+        font-weight: 400;
+        line-height: 58px;
+    
+    }
+    .celsius-actual {
+        position: relative;
+        display: inline-block;
+        margin-left: 21px;    
+    }
+    .celsius-actual::after {
+        position: absolute;
+        content: '°';
+        top: 0;
+        left: -21px;
+    }    
+    .wmo_desc {
+        font-size: 16px;
+        line-height: 19.36px;
+    }
+}
+
+
+.one-day {
+    font-size: 20px;
+    line-height: 24.2px;
+    margin-bottom: 38px;
+    
+    .icon {
+        display: inline-block;
+        width: 23px;
+        margin-right: 13px;
+    }
+    .percent {
+        width: 25px;
+        text-align: right;
+        display: inline-block;        
+    }
+
+    .celsius-daily {
+        position: relative;
+        display: inline-block;
+        margin-left: 10px;    
+    }
+    .celsius-daily::after {
+        position: absolute;
+        content: '°';
+        top: 0;
+        left: -10px;
+    }
+}
+
+.modal {
+    color: #111;
+
+    .list-group {
+        padding: 0 12px;
+    }
+
+    .m-city-d {
+        float: right;
+    }
+
+    button:hover {
+        color: #fff;
+        background: #6ed0ef;
+
+        small {
+            color: #fff !important;
+        }
+    }
+    
+    p.feedback {
+        border-top: 1px solid #ced4da;
+    }
+}
+
+#myChart {
+    color: #111;
+    border-radius: 8px;
+    border: 1px solid #fff;
+}
+
+.myname {
+    font-size: 12px;
+    line-height: 12.52px;
+    margin: 63px 0px 41px;
+}
+
+
+
+@media only screen and (min-width: 671px ){
+    .container {
+        margin-top: 10%;
+    }
+
+    .rain_probability {
+        text-align: center;
+    }
+    .tempreture {
+        text-align: right;
+    }
+}
+
+@media only screen and (max-width: 670px ){
+    .container {
+        margin-top: 51px;
+        padding: 0 38px;
+    }
+    section.actual-weather {
+        margin-bottom: 65px;
+        padding: 0;
+    }
+    section.daily-weather {
+        padding: 0;
+    }
+    .one-day .col:first-child {
+        flex: 1 0 7%;
+    }
+    .one-day .col:last-child {
+        flex: none;
+        min-width: 126px;
+        text-align: right;
+    }
+
+    .rain_probability  {
+        .icon {
+            text-align: center;
+            margin-right: 0;
+        }
+        .icon svg {
+            width: 14px;
+            height: auto;
+        }
+        span.percent {
+            min-width: 24px;
+            display: inline-block;
+            text-align: right;
+        }
+    }
+
+    .myname {
+        margin: 51px 0px 7px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 370px ){
+    .one-day { 
+        .d-flex {
+            flex-direction: column;
+            align-items: flex-start;
+        } 
+
+        .col {
+            margin-bottom: 10px;
+        }
+    }
+}

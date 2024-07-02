@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="app.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+
+           <section class="col-sm-4 actual-weather">
+                <button class="city" type="button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Varos neve</button>
+                <h3 class="degrees"><span class="actual-d">25</span> <span class="celsius-actual">C</span></h3>
+                <p class="wmo_desc">Tiszta idő</p>
+            </section>
+
+            <section class="col-sm-8 daily-weather">
+                <title>7 napos előrejelzés</title>  
+                <div class="daily-list">      
+                    <!-- <div class="row one-day prototype">
+                        <div class="col day">Hétfő</div>
+                        <div class="col rain_probability">
+                            <div class="icon">
+                                <svg width="23" height="12" viewBox="0 0 23 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.3782 0C15.2517 0 17.4486 1.573 17.7676 3.474H17.865C20.3573 3.474 22.3782 4.711 22.3782 6.237C22.3782 7.763 20.3573 9 17.865 9L16.7399 8.999L16.7242 9.024L14.3937 11.728C14.3001 11.8378 14.1452 11.9214 13.9595 11.9621C13.7739 12.0029 13.571 11.998 13.3908 11.9483C13.2106 11.8986 13.0662 11.8078 12.986 11.6937C12.9058 11.5797 12.8956 11.4506 12.9575 11.332L13.014 11.249L14.9547 8.999H12.0429L12.0272 9.024L9.69674 11.728C9.60308 11.8378 9.44817 11.9214 9.26253 11.9621C9.0769 12.0029 8.874 11.998 8.69381 11.9483C8.51361 11.8986 8.36918 11.8078 8.28898 11.6937C8.20877 11.5797 8.1986 11.4506 8.26046 11.332L8.31703 11.249L10.2577 8.999H7.31917L4.98246 11.728C4.89428 11.8308 4.75224 11.9106 4.58109 11.9535C4.40994 11.9964 4.22054 11.9998 4.04589 11.963L3.91703 11.927C3.75563 11.8711 3.63013 11.7809 3.56238 11.6722C3.49462 11.5635 3.48889 11.4431 3.54617 11.332L3.60275 11.249L5.52775 8.999H4.89132C2.39903 8.999 0.378174 7.763 0.378174 6.237C0.378174 4.767 2.25132 3.566 4.61632 3.479L4.98875 3.474C5.31089 1.561 7.50617 0 11.3782 0Z" fill="white"/></svg>
+                            </div>
+                            <span class="percent">56</span>%
+                        </div>
+                        <div class="col tempreture">
+                            <span class="min">9</span> <span class="celsius-daily">C</span> / 
+                            <span class="max">23</span> <span class="celsius-daily">C</span>
+                        </div>
+                    </div> -->
+
+                    <div class="one-day prototype">
+                        <div class="d-flex justify-content-between bd-highlight mb-4">
+                            <div class="col day">x</div>
+                            <div class="col rain_probability">
+                                <div class="icon">
+                                    <svg width="23" height="12" viewBox="0 0 23 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.3782 0C15.2517 0 17.4486 1.573 17.7676 3.474H17.865C20.3573 3.474 22.3782 4.711 22.3782 6.237C22.3782 7.763 20.3573 9 17.865 9L16.7399 8.999L16.7242 9.024L14.3937 11.728C14.3001 11.8378 14.1452 11.9214 13.9595 11.9621C13.7739 12.0029 13.571 11.998 13.3908 11.9483C13.2106 11.8986 13.0662 11.8078 12.986 11.6937C12.9058 11.5797 12.8956 11.4506 12.9575 11.332L13.014 11.249L14.9547 8.999H12.0429L12.0272 9.024L9.69674 11.728C9.60308 11.8378 9.44817 11.9214 9.26253 11.9621C9.0769 12.0029 8.874 11.998 8.69381 11.9483C8.51361 11.8986 8.36918 11.8078 8.28898 11.6937C8.20877 11.5797 8.1986 11.4506 8.26046 11.332L8.31703 11.249L10.2577 8.999H7.31917L4.98246 11.728C4.89428 11.8308 4.75224 11.9106 4.58109 11.9535C4.40994 11.9964 4.22054 11.9998 4.04589 11.963L3.91703 11.927C3.75563 11.8711 3.63013 11.7809 3.56238 11.6722C3.49462 11.5635 3.48889 11.4431 3.54617 11.332L3.60275 11.249L5.52775 8.999H4.89132C2.39903 8.999 0.378174 7.763 0.378174 6.237C0.378174 4.767 2.25132 3.566 4.61632 3.479L4.98875 3.474C5.31089 1.561 7.50617 0 11.3782 0Z" fill="white"/></svg>
+                                </div>
+                                <span class="percent">56</span>%
+                            </div>
+                            <div class="col tempreture">
+                                <span class="min">9</span> <span class="celsius-daily">C</span> / 
+                                <span class="max">23</span> <span class="celsius-daily">C</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row chart">
+                    <div class="col">
+                        <div id="myChart"></div>
+                      </div>                
+                </div>
+            </section>
+
+        </div>
+        <div class="row">
+            <div class="col myname">Krassalkovics Krisztián</div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Helyek keresése</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="input-group">
+                        <input type="search" class="form-control" id="location_search" autocomplete="off" spellcheck="false" aria-label="Search Location"> 
+                        <button tabindex="-1" class="btn btn-outline-secondary" type="button" title="Detect Location via GPS" id="search">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                            </svg>
+                        </button>
+                    </div>                
+                </div>
+                <div class="row" id="search_result">
+                    <div class="list-group mt-4">
+                        <p class="feedback"></p>
+                        <button 
+                            class="list-group-item list-group-item-action position-relative prototype" 
+                            type="button"
+                            data-latitude=""
+                            data-longitude=""
+                            >
+                            <p class="m-city">Buda <span class="m-city-d">(Romanie | Buzău)</span></p> 
+                            <small class="text-muted">Romanie | Buzău </small>                    
+                        </button>
+                    </div> 
+                        
+                                    
+                </div>
+            </div>
+        </div>
+        </div>
+    </div> 
+
+    
+    <script src="./resources/js/jquery-3.7.1.min.js"></script>
+    <script src="./resources/js/bootstrap.min.js"></script>
+    <script src="./resources/js/apexcharts.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
